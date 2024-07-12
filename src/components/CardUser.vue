@@ -83,7 +83,6 @@ h5,
 }
 
 textarea {
-  background-color: v-bind(mensaje.color);
   width: 98%;
   height: 10vh;
 }

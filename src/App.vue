@@ -1,5 +1,5 @@
 <template>
-  <CardUser :usuario="usuarios[0]" @enviarMensaje="enviarMensajeHandler" />
+  <CardUser :usuario="usuarios[0]" @enviarMensaje="enviarMensajeHandler"/>
   <ChatUser :mensajes="mensajes" :usuarios="usuarios" />
   <CardUser
     :usuario="usuarios[1]"
@@ -54,4 +54,5 @@ export default {
   align-items: stretch;
   gap: 2rem;
 }
+
 </style>

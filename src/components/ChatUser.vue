@@ -80,5 +80,10 @@ export default {
 
 #texto {
   border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+p {
+  margin: 0.5rem 1rem 0.5rem 1rem;
 }
 </style>
