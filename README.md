@@ -4,6 +4,7 @@
 
 ### Introducción
 
+
 En este desafío, se validarán los conocimientos sobre el consumo de API’s mediante la creación de una mini aplicación de chat. La aplicación permitirá el diálogo entre dos desconocidos, cuyos perfiles serán obtenidos a través de la API Random User.
 
 ### Descripción del Proyecto

@@ -1,24 +1,15 @@
 <template>
   <div id="scrollable" class="container">
-    <div v-for="(mensaje, index) in mensajes" :key="index">
-      <p
-        :style="{
-          textAlign: mensaje.id === usuarios[0].id.value ? 'left' : 'right',
-        }"
-      >
-        <small>{{ mensaje.nombreCompleto }}</small>
-      </p>
-      <p
-        id="texto"
-        :style="{
-          backgroundColor: mensaje.color,
-          textAlign: mensaje.id === usuarios[0].id.value ? 'left' : 'right',
-          color: isDarkColor(mensaje.color) ? 'white' : 'black',
-        }"
-      >
-        {{ mensaje.texto }}
-      </p>
-    </div>
+      <div  v-for="(mensaje, index) in mensajes" :key="index">
+          <p :style="
+              { textAlign: mensaje.id === usuarios[0].id.value ? 'left' : 'right', marginBottom: 0 , opacity: 0.6, fontSize: '15px' }">
+              <small>{{ mensaje.nombreCompleto }}</small>
+          </p>
+          <p  :style="{
+              textAlign: mensaje.id === usuarios[0].id.value ? 'left' : 'right',   color: isDarkColor(mensaje.color) ? 'white' : 'black',}">
+              <span  id="texto" :style="{backgroundColor: mensaje.color,}">{{ mensaje.texto }}</span>
+          </p>
+      </div>
   </div>
 </template>
 
@@ -76,14 +67,12 @@ export default {
   overflow-y: scroll;
   background-color: rgb(217, 230, 230);
   height: 67.5vh;
+  padding: 0.5rem 1rem;
 }
 
 #texto {
   border-radius: 10px;
   padding: 0.5rem 1rem 0.5rem 1rem;
-}
-
-p {
-  margin: 0.5rem 1rem 0.5rem 1rem;
+  overflow-x: auto;
 }
 </style>
