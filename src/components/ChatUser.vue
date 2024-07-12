@@ -32,5 +32,9 @@ export default {
     max-height: 80vh;
     overflow-y: scroll;
     background-color: rgb(217, 230, 230);
+    height: 67.5vh;
 }
+
+/* overflow: auto;
+align-self: center;*/
 </style>

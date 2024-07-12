@@ -5,9 +5,12 @@
         <h5 class="card-title text-center">{{ nombreCompleto }}</h5>
         <form action="">
           <p class="card-body-color">Selecciona el fondo de tu texto</p>
+          <br>
           <input class="form-control mb-2" type="color" name="color" id="color" v-model="mensaje.color">
+          <br>
           <textarea class="form-control" name="chat" id="chat" v-model="mensaje.texto"
             @keyup.enter="enviarMensaje"></textarea>
+          <br>
           <button @click.prevent="enviarMensaje" class="btn btn-primary my-2">Enviar</button>
         </form>
       </div>
@@ -52,9 +55,11 @@ export default {
 
 <style>
 .card {
-  flex-grow: 1;
+  /* flex-grow: 1;*/
   display: flex;
   flex-direction: column;
+  width: 20%;
+  height: 35vh;
 }
 
 .card-body {
@@ -67,5 +72,11 @@ export default {
 
 textarea {
   background-color: v-bind(mensaje.color);
+  width: 98%;
+  height: 10vh;
+}
+
+input, button {
+  width: 100%;
 }
 </style>
